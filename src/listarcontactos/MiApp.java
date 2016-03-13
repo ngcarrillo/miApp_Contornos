@@ -27,7 +27,7 @@ public class MiApp {
 
         int opcion;
         int seguir;
-        int engadirMas;
+    
         JOptionPane.showMessageDialog(null, "Bienvenido a tu agenda");
 
         /**
