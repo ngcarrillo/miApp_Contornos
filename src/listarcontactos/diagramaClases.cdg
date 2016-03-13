@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="diagramaClases">
+  <ClassDiagramComponents>
+    <Class name="Libreta" package="" visibility="public" xPosition="39.0" yPosition="50.0">
+      <Fields>
+        <Field name="datosPropietario" type="String" visibility="private"/>
+        <Field name="contacto" type="Contacto[]" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="cualLibre" returnType="int" visibility="public"/>
+        <Method name="engadir" returnType="void" visibility="public"/>
+        <Method name="listar" returnType="void" visibility="public"/>
+        <Method name="editar" returnType="void" visibility="public"/>
+        <Method name="eliminar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Contacto" package="" visibility="public" xPosition="221.0" yPosition="280.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="apellido" type="String" visibility="private"/>
+        <Field name="email" type="String" visibility="private"/>
+        <Field name="telefono" type="String" visibility="private"/>
+        <Field name="ID" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="ID"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellido"/>
+          <Argument type="String" name="email"/>
+          <Argument type="String" name="telefono"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="setNombre" returnType="void" visibility="public"/>
+        <Method name="setApellido" returnType="void" visibility="public"/>
+        <Method name="setEmail" returnType="void" visibility="public"/>
+        <Method name="setTelefono" returnType="void" visibility="public"/>
+        <Method name="setID" returnType="void" visibility="public"/>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="getApellido" returnType="String" visibility="public"/>
+        <Method name="getEmail" returnType="String" visibility="public"/>
+        <Method name="getTelefono" returnType="String" visibility="public"/>
+        <Method name="getID" returnType="int" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="MiApp" package="" visibility="public" xPosition="438.0" yPosition="50.0">
+      <Fields>
+        <Field name="opcion" type="int" visibility="public"/>
+        <Field name="engadir" type="int" visibility="public"/>
+        <Field name="miLibreta" type="object" visibility="public"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="contacto" source="Libreta" target="Contacto" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="miLibreta" source="MiApp" target="Libreta" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
